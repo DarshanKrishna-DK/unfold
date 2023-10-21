@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>HRX - Reward</title>
+    <style>
+        body{
+            background: #cbcbcb;
+        }
+
+        .reward-container {
+            height: 400px;
+            width: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            margin: 150px auto;
+            text-align: center;
+            background-color: white;
+            color: #222;
+            font-family: Arial, sans-serif;
+            border-radius: 20px;
+            box-shadow: 0px 2px 10px black;
+        }
+
+        .reward-container i{
+            font-size: 150px;
+            color: blueviolet;
+        }
+
+        .reward-container h3 i{
+            font-size: 25px;
+            color: black;
+        }
+
+        .reward-container h1{
+            text-transform: uppercase;
+        }
+
+        .reward-container .btn{
+            padding: 10px 20px;
+            background-color: transparent;
+            border: 2px solid black;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 15px;
+            transition: background-color 0.3s ease;
+        }
+
+        .reward-container .btn:hover{
+            background-color: black;
+            color: white;
+            box-shadow: 0 0 5px grey;
+        }
+
+    </style>
+</head>
+<body>
+    <section class="reward-container">
+        <i class='bx bxs-trophy'></i>
+        <h3 class="reward-title">Congratulations! <i class='bx bxs-party'></i> <br> You have been rewarded an NFT!</h3>
+        <a href="/your-minting-script.js"><button class="btn">GET REWARD</button></a>
+    </section>
+</body>
+</html>
