@@ -29,10 +29,11 @@ a{
 .fa{
     display: none;
 }
+
 .header{
     min-height: 100vh;
     width: 100%;
-    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(images/bg.jpg);
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(Images/home_bg.jpg);
     background-position: center;
     background-size: cover;
     position: relative;
@@ -55,6 +56,10 @@ a{
     font-size: 30px;
     text-align: center;
     margin-top: 25px;
+}
+
+.navbar a h2 span{
+    color: red;
 }
 
 .nav-links{
@@ -127,7 +132,7 @@ a{
     font-size: 2.5rem;
     color: #fff;
     padding: 1.5rem;
-    margin-bottom: 1rem;
+    margin-bottom: 3rem;
     line-height: 3rem;
 }
 
@@ -178,11 +183,12 @@ a{
     display: flex;
     justify-content: space-between;
     padding: 0 2rem;
+    align-items: center;
 }
 
 .col{
     flex-basis: 32%;
-    padding: 1rem 0.5rem;
+    padding: .5rem 0.5rem;
     margin-bottom: 3.5rem;
     transition: all 0.3s ease-in-out;
     background: #f2f2f2;
@@ -205,6 +211,12 @@ a{
 
 .col h2 span{
     color: #ff324f;
+}
+
+.col p{
+    font-weight: bold;
+    font-size: 32px;
+    padding-bottom: 2rem;
 }
 
 .col:hover{
