@@ -1,6 +1,21 @@
 {
+  "name": "devfest",
+  "version": "1.0.0",
+  "description": "What is the problem with solving DSA questions when you have all the things at your bay? The answer is simple: <strong>Long term reward mechanism</strong>. The problem is that hackers practice DSA questions for getting placements but turns out that their hard work is often not recognised. So, what what is our proposal? Simple. <i>Reward them as they progress to keep up their motivation</i>.",
+  "main": "test.js",
+  "scripts": {
+    "start": "vite"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.31",
+    "tailwindcss": "^3.3.3",
+    "vite": "^4.5.0"
+  },
   "dependencies": {
-    "@pushprotocol/restapi": "^1.4.28",
-    "ethers": "^5.7.2"
+    "@metamask/sdk": "^0.10.0"
   }
 }
