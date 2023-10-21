@@ -488,7 +488,7 @@ if(window.ethereum !== undefined || window.ethereum !== null  ){
     const contract = new ethers.Contract(contractAddress, contractABI, signer);
 
     const mintButton = document.getElementById('mintButton');
-    const status = document.getElementById('status');
+    
 
     mintButton.addEventListener('click', async () => {
         try {
@@ -500,10 +500,11 @@ if(window.ethereum !== undefined || window.ethereum !== null  ){
             const tx = await contract.mintNFT(userAddress,tokenURI);
             await tx.wait();
 
-            status.innerHTML = 'NFT Minted successfully!';
+            console.log("NFT MINTED SUCCESFULLY");
+            mintButton.innerHTML = 'NFT Minted successfully!';
         } catch (error) {
             console.error('Error minting NFT:', error);
-            status.innerHTML = 'Error minting NFT. Please check your wallet and try again.';
+            mintButton.innerHTML = 'Error minting NFT. Please check your wallet and try again.';
         }
     });
 }
