@@ -1,5 +1,5 @@
 # Unfold2023 Hackathon: Powered by CoinDCX
-## Hackerrank 3.0: Hackerrank for the Web3
+## HRX: Hackerrank for the Web3
 
 What is the problem with solving DSA questions when you have all the things at your bay? The answer is simple: <strong>Long term reward mechanism</strong>. The problem is that hackers practice DSA questions for getting placements but turns out that their hard work is often not recognised. So, what what is our proposal? Simple. <i>Reward them as they progress to keep up their motivation</i>.
 
