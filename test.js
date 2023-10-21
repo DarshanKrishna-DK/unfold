@@ -1,25 +1,26 @@
-// Import restapi for function calls
-import { PushAPI } from '@pushprotocol/restapi'
+import {MetaMaskSDK} from '@metamask/sdk';
 
-// Ethers v5 or Viem, both are supported
-import { ethers } from 'ethers'
+const MMSDK = new MetaMaskSDK.MetaMaskSDK()
 
-// Creating a random signer from a wallet, ideally this is the wallet you will connect
-const signer = ethers.Wallet.createRandom()
+const ethereum = MMSDK.getProvider();
 
-// Initialize wallet user, pass 'prod' instead of 'staging' for mainnet apps
-const userAlice = await PushAPI.initialize(signer, { env: 'staging' })
+const connectButton = document.getElementById("button");
 
-// Requires user to have a channel, see Create Channel section for more info
-// ['*'] sends to all wallets who have opted in to your channel
-const response = await userAlice.channel.send(['*'], {
-    notification: { 
-      title: 'You awesome notification', 
-      body: 'from your amazing protocol' 
+connectButton.addEventListener("click", async () => {
+  if (typeof window.ethereum !== "undefined") {
+    // MetaMask is installed
+    try {
+      const accounts = await ethereum.request({ method: "eth_requestAccounts" });
+      const walletAddress = accounts[0];
+
+      // User is connected to MetaMask
+      console.log("Connected to MetaMask: ", walletAddress);
+    } catch (error) {
+      // Something went wrong while connecting to MetaMask
+      console.error(error);
     }
-  }) 
-
-// To listen to real time notifications
-userAlice.stream.on('STREAM.NOTIF', (data) => {
-    console.log(data)
-  })
+  } else {
+    // MetaMask is not installed
+    window.open("https://metamask.io/", "_blank");
+  }
+});
